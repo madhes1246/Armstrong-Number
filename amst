@@ -1,0 +1,43 @@
+package num;
+
+import java.util.Scanner;
+
+public class amst {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=0;
+		int result=1;
+		int t=0;
+		int f=0;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the Number");//display user show message
+		int s=scan.nextInt();//get the number value value
+		int num=s;// value assign for other number
+		while(num!=0)
+		{
+			++n;// find the number length
+			num=num/10;// reduse the last digit number
+		}
+		int m=s;
+		for(int i=0; i<n;i++)
+		{
+		t=m%10; // getting last digit number;
+		for(int j=0;j<n;j++)
+		{
+			result=result*t;//power of multiplay the 
+		}
+		f=f+result; //store every number multiplay value ex: 1^3 5^3 3^3 stror
+		result=1;//reduse the value
+		m=m/10;// 
+		}
+		
+		if(s==f) {
+			System.out.println("It Is Amstrong Number");
+		}
+		else
+			System.out.println("It Is Not Amstrong Number");
+		
+	}
+
+}
